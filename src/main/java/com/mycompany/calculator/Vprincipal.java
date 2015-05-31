@@ -2,7 +2,7 @@
 package com.mycompany.calculator;
 
 /**
- * @author Nast
+ * @author Nast y Fernando
  */
 public class Vprincipal extends javax.swing.JFrame {
     
@@ -43,6 +43,11 @@ boolean nueva=true;
 
         pantalla.setFont(new java.awt.Font("Tahoma", 0, 36)); // NOI18N
         pantalla.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
+        pantalla.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                pantallaActionPerformed(evt);
+            }
+        });
 
         cuatro.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         cuatro.setText("4");
@@ -284,72 +289,141 @@ boolean nueva=true;
     }// </editor-fold>//GEN-END:initComponents
 
     private void ceroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ceroActionPerformed
-        // TODO add your handling code here:
+        if(nueva){pantalla.setText("");nueva=false;}
+                        pantalla.setText(pantalla.getText()+"0");
     }//GEN-LAST:event_ceroActionPerformed
 
     private void puntoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_puntoActionPerformed
-        // TODO add your handling code here:
+        if(nueva){pantalla.setText("");nueva=false;}
+                        pantalla.setText(pantalla.getText()+".");
     }//GEN-LAST:event_puntoActionPerformed
 
     private void igualActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_igualActionPerformed
-        // TODO add your handling code here:
+                try{
+                    op2=Double.parseDouble(pantalla.getText());
+                }catch(Exception err){}
+                if(operacion.equals("suma")){
+                    double res=op1+op2;
+                    pantalla.setText(String.valueOf(res));
+                    op1=op2=0;
+                    operacion="";
+                }else if(operacion.equals("resta")){
+                    double res=op1-op2;
+                    pantalla.setText(String.valueOf(res));
+                    op1=op2=0;
+                    operacion="";
+                }else if(operacion.equals("multiplicacion")){
+                    double res=op1*op2;
+                    pantalla.setText(String.valueOf(res));
+                    op1=op2=0;
+                    operacion="";
+                }else if(operacion.equals("division")){
+                    double res=op1/op2;
+                    pantalla.setText(String.valueOf(res));
+                    op1=op2=0;
+                    operacion="";
+                }
+                nueva=true;
     }//GEN-LAST:event_igualActionPerformed
 
     private void unoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_unoActionPerformed
-        // TODO add your handling code here:
+        if(nueva){pantalla.setText("");nueva=false;}
+                        pantalla.setText(pantalla.getText()+"1");
     }//GEN-LAST:event_unoActionPerformed
 
     private void dosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_dosActionPerformed
-        // TODO add your handling code here:
+        if(nueva){pantalla.setText("");nueva=false;}
+                        pantalla.setText(pantalla.getText()+"2");
     }//GEN-LAST:event_dosActionPerformed
 
     private void tresActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tresActionPerformed
-        // TODO add your handling code here:
+        if(nueva){pantalla.setText("");nueva=false;}
+                        pantalla.setText(pantalla.getText()+"3");
     }//GEN-LAST:event_tresActionPerformed
 
     private void cuatroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cuatroActionPerformed
-        // TODO add your handling code here:
+        if(nueva){pantalla.setText("");nueva=false;}
+                        pantalla.setText(pantalla.getText()+"4");
     }//GEN-LAST:event_cuatroActionPerformed
 
     private void cincoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cincoActionPerformed
-        // TODO add your handling code here:
+        if(nueva){pantalla.setText("");nueva=false;}
+                        pantalla.setText(pantalla.getText()+"5");
     }//GEN-LAST:event_cincoActionPerformed
 
     private void seisActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_seisActionPerformed
-        // TODO add your handling code here:
+        if(nueva){pantalla.setText("");nueva=false;}
+                        pantalla.setText(pantalla.getText()+"6");
     }//GEN-LAST:event_seisActionPerformed
 
     private void sieteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sieteActionPerformed
-        // TODO add your handling code here:
+        if(nueva){pantalla.setText("");nueva=false;}
+                        pantalla.setText(pantalla.getText()+"7");
     }//GEN-LAST:event_sieteActionPerformed
 
     private void ochoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ochoActionPerformed
-        // TODO add your handling code here:
+        if(nueva){pantalla.setText("");nueva=false;}
+                        pantalla.setText(pantalla.getText()+"8");
     }//GEN-LAST:event_ochoActionPerformed
 
     private void nueveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nueveActionPerformed
-        // TODO add your handling code here:
+        if(nueva){pantalla.setText("");nueva=false;}
+                        pantalla.setText(pantalla.getText()+"9");
     }//GEN-LAST:event_nueveActionPerformed
 
     private void masActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_masActionPerformed
-        // TODO add your handling code here:
+                try{
+                    if(op1!=0)
+                        op1=op1+Double.parseDouble(pantalla.getText());
+                    else
+                        op1=Double.parseDouble(pantalla.getText());
+                    operacion="suma";
+                    pantalla.setText("");
+                }catch(Exception err){}
     }//GEN-LAST:event_masActionPerformed
 
     private void menosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menosActionPerformed
-        // TODO add your handling code here:
+                try{
+                    if(op1!=0)
+                        op1=op1-Double.parseDouble(pantalla.getText());
+                    else
+                        op1=Double.parseDouble(pantalla.getText());
+                    operacion="resta";
+                    pantalla.setText("");
+                }catch(Exception err){}
     }//GEN-LAST:event_menosActionPerformed
 
     private void multiplicarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_multiplicarActionPerformed
-        // TODO add your handling code here:
+                try{
+                    if(op1!=0)
+                        op1=op1*Double.parseDouble(pantalla.getText());
+                    else
+                        op1=Double.parseDouble(pantalla.getText());
+                    operacion="multiplicacion";
+                    pantalla.setText("");
+                }catch(Exception err){}
     }//GEN-LAST:event_multiplicarActionPerformed
 
     private void dividirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_dividirActionPerformed
-        // TODO add your handling code here:
+                try{
+                    if(op1!=0)
+                        op1=op1/Double.parseDouble(pantalla.getText());
+                    else
+                        op1=Double.parseDouble(pantalla.getText());
+                    operacion="division";
+                    pantalla.setText("");
+                }catch(Exception err){}
     }//GEN-LAST:event_dividirActionPerformed
 
     private void resetActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_resetActionPerformed
-        // TODO add your handling code here:
+                pantalla.setText("");
+                op1=op2=0;
+                operacion="";
     }//GEN-LAST:event_resetActionPerformed
+
+    private void pantallaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pantallaActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_pantallaActionPerformed
 
     /**
      * @param args the command line arguments

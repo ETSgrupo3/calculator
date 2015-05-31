@@ -64,6 +64,7 @@ public class Vprincipal extends javax.swing.JFrame {
         jMenuItem1 = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setResizable(false);
 
         txtpantalla.setBackground(new java.awt.Color(0, 102, 102));
         txtpantalla.setFont(new java.awt.Font("Tahoma", 0, 48)); // NOI18N
@@ -282,7 +283,7 @@ public class Vprincipal extends javax.swing.JFrame {
 
         jMenuBar1.setBackground(new java.awt.Color(0, 102, 102));
 
-        jMenu1.setBackground(new java.awt.Color(0, 102, 102));
+        jMenu1.setBackground(new java.awt.Color(255, 255, 255));
         jMenu1.setForeground(new java.awt.Color(0, 102, 102));
         jMenu1.setText("Info");
         jMenu1.addActionListener(new java.awt.event.ActionListener() {
@@ -291,7 +292,8 @@ public class Vprincipal extends javax.swing.JFrame {
             }
         });
 
-        jMenuItem1.setBackground(new java.awt.Color(0, 102, 102));
+        jMenuItem1.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_I, java.awt.event.InputEvent.CTRL_MASK));
+        jMenuItem1.setBackground(new java.awt.Color(255, 255, 255));
         jMenuItem1.setForeground(new java.awt.Color(0, 102, 102));
         jMenuItem1.setText("Acerca de....");
         jMenuItem1.addActionListener(new java.awt.event.ActionListener() {
@@ -598,8 +600,8 @@ public static String calculadora(String memoria1,String memoria2,String signo){
     }//GEN-LAST:event_jMenu1ActionPerformed
 
     private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
- Info a = new Info(null, true);
-        a.setVisible(true);         
+        Info a = new Info(null, true);
+        a.setVisible(true);
     }//GEN-LAST:event_jMenuItem1ActionPerformed
 
     public static boolean existepunto(String cadena){

@@ -40,6 +40,7 @@ public class Info extends javax.swing.JDialog {
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setTitle("Entornos de Desarrollo - Grupo 3");
         setBackground(new java.awt.Color(102, 255, 102));
+        setResizable(false);
 
         jPanel1.setBackground(new java.awt.Color(245, 245, 245));
 

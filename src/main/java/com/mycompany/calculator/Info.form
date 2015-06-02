@@ -158,7 +158,7 @@
               <Color blue="66" green="66" red="0" type="rgb"/>
             </Property>
             <Property name="horizontalAlignment" type="int" value="0"/>
-            <Property name="text" type="java.lang.String" value="Neftal&#xed;"/>
+            <Property name="text" type="java.lang.String" value="Neftal&#xed; Su&#xe1;rez Cabrera"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JSeparator" name="jSeparator1">

@@ -110,7 +110,7 @@
               <Color blue="66" green="66" red="0" type="rgb"/>
             </Property>
             <Property name="horizontalAlignment" type="int" value="0"/>
-            <Property name="text" type="java.lang.String" value="Entornos de Desarrollo - Grupo 3"/>
+            <Property name="text" type="java.lang.String" value=" Grupo 3"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="jLabel3">
